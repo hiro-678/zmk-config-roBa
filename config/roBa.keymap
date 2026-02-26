@@ -140,11 +140,11 @@
         MOUSE {
             bindings = <
 &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer   &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer
-&exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer   &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer            &mkp MB1            &mkp MB2
+&exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer   &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &mkp MB1            &mkp MB2
 &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer   &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer
 &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer   &exit_mouse_layer  &exit_mouse_layer  &exit_mouse_layer                                   &exit_mouse_layer
-    >;
-};
+            >;
+        };
 
         SCROLL {
             bindings = <
