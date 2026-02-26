@@ -2,9 +2,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: kumamaki-git  # ← これがroBa本体の定義に必須です！
-      url-base: https://github.com/kumamaki-git
-    - name: badjeff      # トラックボール(PMW3610)のドライバー
+    - name: badjeff      # トラックボール(PMW3610)のドライバー用
       url-base: https://github.com/badjeff
     - name: zettaface    # ジェスチャーの基盤モジュール
       url-base: https://github.com/zettaface
@@ -16,11 +14,8 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0   # アライ氏の設定に合わせ、安定版を指定します
+      revision: main     # 最新の環境に合わせてmainに戻します
       import: app/west.yml
-    - name: roba         # 【重要】これを忘れていました！roBaのシールド定義です
-      remote: kumamaki-git
-      revision: main
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
