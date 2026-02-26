@@ -81,6 +81,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        // 長押しでマクロ、タップで通常のキー入力をする挙動
+        login_ht: login_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>; // 200ミリ秒以上の長押しでマクロ発動
+            bindings = <&login_macro>, <&kp>;
+            label = "LOGIN_HOLD_TAP";
+        };
     };
 
     keymap {
