@@ -2,32 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: badjeff      # トラックボール(PMW3610)のドライバー用
-      url-base: https://github.com/badjeff
-    - name: zettaface    # ジェスチャーの基盤モジュール
-      url-base: https://github.com/zettaface
-    - name: kot149       # ジェスチャー機能本体
-      url-base: https://github.com/kot149
-    - name: ssbb         # 入力監視用モジュール
-      url-base: https://github.com/ssbb
-
+    - name: kumamuk-git
+      url-base: https://github.com/kumamuk-git
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main     # 最新の環境に合わせてmainに戻します
+      revision: v0.3-branch
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: kumamuk-git
       revision: main
-    - name: zmk-input-processor-keybind
-      remote: zettaface
-      revision: main
-    - name: zmk-mouse-gesture
-      remote: kot149
-      revision: v1
-    - name: zmk-listeners
-      remote: ssbb
-      revision: v1
-
   self:
     path: config
