@@ -5,8 +5,8 @@
     idle-timeout-ms = <100>;
     gesture-cooldown-ms = <120>;
 
-    prev_tab    { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(LS(TAB))>; };
-    next_tab    { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(TAB)>;     };
-    Create_tab  { pattern = <GESTURE_UP>;    bindings = <&kp LC(T)>;      };
-    close_tab   { pattern = <GESTURE_DOWN>;  bindings = <&kp LC(W)>;       };
+    next_tab    { pattern = <GESTURE_LEFT>;  bindings = <&kp LA(LG(DOWN))>; };
+    prev_tab    { pattern = <GESTURE_RIGHT>; bindings = <&kp LA(LG(UP))>; };
+    prev_page  { pattern = <GESTURE_UP>;    bindings = <&kp LA(LG(LEFT))>; };
+    next_page   { pattern = <GESTURE_DOWN>;  bindings = <&kp LA(LG(RIGHT))>; };
 };
