@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&kp Q                  &kp W             &kp E             &kp R                   &kp T                                            &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A                  &kp S             &kp D             &kp F                   &kp G        &kp LS(LG(S))        &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z       &kp X             &kp C             &kp V                   &kp B        &kp SEMICOLON        &kp AMPERSAND  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_SHIFT ESCAPE  &kp LEFT_CONTROL  &mt LEFT_ALT TAB  &lt_to_layer_0 6 BACKSPACE  &lt 2 SPACE  &lt 7 LANG2      &lt 2 LANG1    &lt 1 ENTER                             &kp QUESTION
+&kp Q                  &kp W             &kp E             &kp R          &kp T                                          &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
+&kp A                  &kp S             &kp D             &kp F          &kp G        &kp LS(LG(S))      &kp EQUAL      &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z       &kp X             &kp C             &kp V          &kp B        &kp SEMICOLON      &kp AMPERSAND  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT ESCAPE  &kp LEFT_CONTROL  &mt LEFT_ALT TAB  &kp BACKSPACE  &lt 2 SPACE  &lt 3 LANG2        &lt 2 LANG1    &lt 1 ENTER                             &kp QUESTION
             >;
 
             sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
@@ -120,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB1  &mkp MB2
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                 &trans             &trans  &trans  &trans  &mkp MB1  &mkp MB2
+&trans  &trans  &trans  &trans  &trans  &trans                 &trans             &trans  &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &to_layer_0 LANG2      &to_layer_0 LANG1  &trans                            &trans
             >;
         };
 
@@ -144,6 +144,5 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
-
     };
 };
