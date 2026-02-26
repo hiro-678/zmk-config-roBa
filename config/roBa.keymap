@@ -53,6 +53,16 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        Desk_LEFT {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <18 19>;
+        };
+
+        Desk_RIGHT {
+            bindings = <&kp RC(RIGHT)>;
+            key-positions = <19 20>;
+        };
     };
 
     macros {
@@ -82,6 +92,7 @@
         };
 
         // 長押しでマクロ、タップで通常のキー入力をする挙動
+
         login_ht: login_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
