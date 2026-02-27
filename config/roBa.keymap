@@ -89,14 +89,14 @@
             label = "PW1_SHORT";
         };
 
-        pw1_short: pw1_middld {
+        pw1_middle: pw1_middld {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4>;
             label = "PW1_MIDDLE";
         };
 
-        pw1_short: pw1_long {
+        pw1_long: pw1_long {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4>;
