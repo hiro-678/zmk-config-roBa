@@ -99,7 +99,7 @@
         pw1_long: pw1_long {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp UNDER &kp LS(Y) &kp U &kp I>;
+            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp UNDERSCORE &kp LS(Y) &kp U &kp I>;
             label = "PW1_LONG";
         };
     };
