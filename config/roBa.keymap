@@ -201,10 +201,10 @@
 
         FUNCTION {
             bindings = <
-&pw1_short  &pw1_middle  &pw1_long  &trans  &trans                               　　  &kp JP_QUOTE       &kp JP_LBRACKET       &kp JP_RBRACKET        &kp LESS_THAN  &kp GREATER_THAN
-&pw2_short  &pw2_middle  &pw2_long  &trans  &trans  &trans         &kp JP_UNDERSCORE  &kp JP_DQUOTE      &kp JP_LPAREN         &kp JP_RPAREN          &kp JP_PIPE    &kp JP_TILDE
-&trans      &trans       &trans     &trans  &trans  &kp HASH       &kp SEMICOLON      &kp JP_AT          &kp JP_LBRACE         &kp JP_RBRACE          &kp JP_CARET   &kp JP_BSLH
-&trans      &trans       &trans     &trans  &trans  &kp DEL        &trans             &trans                                                                         &kp EXCLAMATION
+&pw1_short  &pw1_middle  &pw1_long  &trans  &trans                                    &kp JP_QUOTE       &kp JP_LBRACKET       &kp JP_RBRACKET        &kp LESS_THAN  &kp GREATER_THAN
+&pw2_short  &pw2_middle  &pw2_long  &trans  &trans  &trans           &kp JP_UNDERSCORE  &kp JP_DQUOTE      &kp JP_LPAREN         &kp JP_RPAREN          &kp JP_PIPE    &kp JP_TILDE
+&trans      &trans       &trans     &trans  &trans  &kp HASH         &kp SEMICOLON      &kp JP_AT          &kp JP_LBRACE         &kp JP_RBRACE          &kp JP_CARET   &kp JP_BSLH
+&trans      &trans       &trans     &trans  &trans  &kp DEL          &trans             &trans                                                                         &kp EXCLAMATION
             >;
         };
 
