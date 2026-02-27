@@ -218,19 +218,3 @@
         };
     };
 };
-
-/ {
-    /* スクロールの動作を定義する名前（ラベル）を作成 */
-    zip_scroll_scaler: zip_scroll_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <0x02>;
-        
-        /* ここを追加：縦ホイールと横ホイールの両方を対象にします */
-        codes = <INPUT_REL_WHEEL>, <INPUT_REL_HWHEEL>;
-
-        /* スクロール速度： -1 ÷ 2 = -0.5倍（逆方向に半分の速さ） */
-        multiplier = <(-1)>; 
-        divisor = <2>;       
-    };
-};
