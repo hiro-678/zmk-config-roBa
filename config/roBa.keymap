@@ -88,6 +88,31 @@
             bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp NUMBER_2 &kp NUMBER_4>;
             label = "PW1_SHORT";
         };
+
+        // 左のデスクトップへ移動
+        m_desk_l: m_desk_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        // 右のデスクトップへ移動
+        m_desk_r: m_desk_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
     };
 
     behaviors {
@@ -158,7 +183,7 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &m_desk_l     &m_desk_r     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                 &trans             &trans  &trans  &kp LG(T)     &mkp MB1       &mkp MB2
 &trans  &trans  &trans  &trans  &trans  &trans                 &trans             &trans  &trans  &kp LG(W)     &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &to_layer_0 LANG2      &to_layer_0 LANG1  &trans                                       &trans
