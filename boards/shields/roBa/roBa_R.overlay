@@ -59,3 +59,9 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
+
+/* スクロール速度の倍率を新しく定義する */
+&zip_scroll_scaler {
+    multiplier = <1>; /* この数字を大きくすると速くなります（例: 3, 4） */
+    divisor = <2>;    /* この数字を大きくすると遅くなります（例: 2） */
+};
