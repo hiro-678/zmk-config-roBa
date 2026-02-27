@@ -202,10 +202,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans            &trans             &trans                                            &trans  &trans  &trans    &trans    &trans
-&trans  &trans  &kp LA(LG(DOWN))  &kp LG(LA(UP))     &kp LA(LG(LEFT))   &trans      &trans             &trans  &trans  &mkp MB1  &mkp MB2  &trans
-&trans  &trans  &trans            &trans             &kp LA(LG(RIGHT))  &trans      &trans             &trans  &trans  &trans    &trans    &trans
-&trans  &trans  &trans            &to_layer_0 LANG2  &trans             &trans      &to_layer_0 LANG1  &trans                              &trans
+&trans  &trans  &trans            &trans             &trans                                            &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &kp LA(LG(DOWN))  &kp LG(LA(UP))     &kp LA(LG(LEFT))   &trans      &trans             &trans  &mkp MB1  &mkp MB2  &mkp MB2  &trans
+&trans  &trans  &trans            &trans             &kp LA(LG(RIGHT))  &trans      &trans             &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans            &to_layer_0 LANG2  &trans             &trans      &to_layer_0 LANG1  &trans                                &trans
             >;
         };
 
