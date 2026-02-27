@@ -218,3 +218,16 @@
         };
     };
 };
+
+/ {
+    /* 以前のエラー（image_2a1fcf.jpg）を回避するため、名前を定義します */
+    zip_scroll_scaler: zip_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <0x02>;
+        
+        /* スクロール速度の計算： -1 ÷ 2 = -0.5倍（逆方向に半分の速さ） */
+        multiplier = <(-1)>; 
+        divisor = <2>;       
+    };
+};
