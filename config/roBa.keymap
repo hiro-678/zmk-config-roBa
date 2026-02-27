@@ -117,7 +117,7 @@
             label = "PW1_SHORT";
         };
 
-        pw1_middle: pw1_middld {
+        pw1_middle: pw1_middle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp LS(Y) &kp U &kp I>;
@@ -145,7 +145,7 @@
             label = "PW2_SHORT";
         };
 
-        pw2_middle: pw2_middld {
+        pw2_middle: pw2_middle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp LS(T) &kp E &kp T &kp S &kp U>;
@@ -201,7 +201,7 @@
 
         FUNCTION {
             bindings = <
-&pw1_short  &pw1_middle  &pw1_long  &trans  &trans                                    &kp JP_QUOTE       &kp JP_LBRACKET       &kp JP_RBRACKET        &kp LESS_THAN  &kp GREATER_THAN
+&pw1_short  &pw1_middle  &pw1_long  &mail1  &trans                                      &kp JP_QUOTE       &kp JP_LBRACKET       &kp JP_RBRACKET        &kp LESS_THAN  &kp GREATER_THAN
 &pw2_short  &pw2_middle  &pw2_long  &trans  &trans  &trans           &kp JP_UNDERSCORE  &kp JP_DQUOTE      &kp JP_LPAREN         &kp JP_RPAREN          &kp JP_PIPE    &kp JP_TILDE
 &trans      &trans       &trans     &trans  &trans  &kp HASH         &kp SEMICOLON      &kp JP_AT          &kp JP_LBRACE         &kp JP_RBRACE          &kp JP_CARET   &kp JP_BSLH
 &trans      &trans       &trans     &trans  &trans  &kp DEL          &trans             &trans                                                                         &kp EXCLAMATION
