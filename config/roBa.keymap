@@ -102,6 +102,34 @@
             bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp UNDERSCORE &kp LS(Y) &kp U &kp I>;
             label = "PW1_LONG";
         };
+
+        mail1: mail1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp UNDERSCORE &kp LS(Y) &kp U &kp I>;
+            label = "MAIL1";
+        };
+
+        pw2_short: pw2_short {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1>;
+            label = "PW2_SHORT";
+        };
+
+        pw2_middle: pw2_middld {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp LS(T) &kp E &kp T &kp S &kp U>;
+            label = "PW2_MIDDLE";
+        };
+
+        pw2_long: pw2_long {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp UNDERSCORE &kp LS(T) &kp E &kp T &kp S &kp U>;
+            label = "PW2_LONG";
+        };
     };
 
     behaviors {
