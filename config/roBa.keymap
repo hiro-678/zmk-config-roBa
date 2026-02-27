@@ -161,6 +161,13 @@
             bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp JP_UNDERSCORE &kp LS(T) &kp E &kp T &kp S &kp U>;
             label = "PW2_LONG";
         };
+
+        mail2: mail2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp DOT &kp S &kp A &kp Y &kp A &kp M &kp A &kp JP_AT &kp A &kp S &kp T &kp E &kp L  &kp L &kp A &kp S &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL2";
+        };
     };
 
     behaviors {
@@ -205,7 +212,7 @@
         FUNCTION {
             bindings = <
 &pw1_short  &pw1_middle  &pw1_long  &mail1  &trans                                   &kp JP_QUOTE   &kp JP_LBRACKET  &kp JP_RBRACKET  &kp LESS_THAN  &kp GREATER_THAN
-&pw2_short  &pw2_middle  &pw2_long  &trans  &trans  &trans        &kp JP_UNDERSCORE  &kp JP_DQUOTE  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_PIPE    &kp JP_TILDE
+&pw2_short  &pw2_middle  &pw2_long  &mail2  &trans  &trans        &kp JP_UNDERSCORE  &kp JP_DQUOTE  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_PIPE    &kp JP_TILDE
 &trans      &trans       &trans     &trans  &trans  &kp HASH      &kp SEMICOLON      &kp JP_AT      &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_CARET   &kp JP_BSLH
 &trans      &trans       &trans     &trans  &trans  &kp DEL       &trans             &trans                                                          &kp EXCLAMATION
             >;
