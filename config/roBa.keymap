@@ -170,6 +170,19 @@
             bindings = <&kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp DOT &kp S &kp A &kp Y &kp A &kp M &kp A &kp JP_AT &kp A &kp S &kp T &kp E &kp L &kp L &kp A &kp S &kp DOT &kp C &kp O &kp M>;
             label = "MAIL2";
         };
+
+        copy_search: copy_search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp LG(C)>            // コピー (Cmd + C)
+                , <&kp LG(T)>            // 新規タブ (Cmd + T)
+                , <&macro_wait_time 150> // タブが開くのを0.15秒待つ
+                , <&kp LG(V)>            // ペースト (Cmd + V)
+            label = "COPY_SEARCH";
+        };
     };
 
     behaviors {
@@ -265,10 +278,10 @@
 
         ARROW {
             bindings = <
-&trans  &trans  &trans            &kp LA(LG(UP))    &trans                                 &trans  &kp LG(T)  &kp UP_ARROW  &kp LG(W)        &trans
-&trans  &trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans      &trans  &trans  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans  &trans     &trans        &kp LS(LG(T))    &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans                                            &trans
+&trans  &trans  &trans            &kp LA(LG(UP))    &trans                                 &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
+&trans  &trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans      &trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
+&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -303,10 +316,10 @@
 
         FIXARROW {
             bindings = <
-&tog 7  &trans  &trans            &kp LA(LG(UP))    &trans                                 &trans  &kp LG(T)  &kp UP_ARROW  &kp LG(W)        &trans
-&trans  &trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans      &trans  &trans  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans  &trans     &trans        &kp LS(LG(T))    &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans                                            &trans
+&tog 7  &trans  &trans            &kp LA(LG(UP))    &trans                                 &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
+&trans  &trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans      &trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
+&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans                                               &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&inc_dec_kp 0 0>;
