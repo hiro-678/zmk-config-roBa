@@ -176,11 +176,7 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <30>;
-            bindings
-                = <&kp LG(C)>            // コピー (Cmd + C)
-                , <&kp LG(T)>            // 新規タブ (Cmd + T)
-                , <&macro_wait_time 150> // タブが開くのを0.15秒待つ
-                , <&kp LG(V)>            // ペースト (Cmd + V)
+            bindings = <&kp LG(C) &kp LG(T) &macro_wait_time 150 &kp LG(V) &kp ENTER>;
             label = "COPY_SEARCH";
         };
     };
