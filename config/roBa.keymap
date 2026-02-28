@@ -161,6 +161,13 @@
             bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp JP_UNDERSCORE &kp LS(T) &kp E &kp T &kp S &kp U>;
             label = "PW2_LONG";
         };
+
+        mail2: mail2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp DOT &kp S &kp A &kp Y &kp A &kp M &kp A &kp JP_AT &kp A &kp S &kp T &kp E &kp L &kp L &kp A  &kp S &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL2";
+        };
     };
 
     behaviors {
@@ -174,7 +181,6 @@
         };
 
         // 長押しでマクロ、タップで通常のキー入力をする挙動
-
         login_ht: login_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
