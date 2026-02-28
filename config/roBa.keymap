@@ -274,10 +274,10 @@
 
         ARROW {
             bindings = <
-&trans  &trans  　　　　　　&kp LA(LG(UP))    &trans             &trans                      &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
-&trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans  &trans      &trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
-&trans  &trans  　　　　　　&trans            &trans             &trans  &trans      &trans  &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
-&trans  &trans  　　　　　　&trans            &trans             &trans  &trans      &trans  &trans                                               &trans
+&trans  &trans            &kp LA(LG(UP))    &trans            &trans                                 &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
+&trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT)) &trans  &trans               &trans    &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
+&trans  &trans            &trans            &trans            &trans  &trans               &trans    &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
+&trans  &trans            &trans            &trans            &trans  &trans               &trans    &trans                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -312,10 +312,10 @@
 
         FIXARROW {
             bindings = <
-&tog 7  &trans  &trans            &kp LA(LG(UP))    &trans                                 &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
-&trans  &trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans      &trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans                                               &trans
+&tog 7  &trans            &kp LA(LG(UP))    &trans            &trans                                 &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
+&trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT)) &trans  &trans               &trans    &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
+&trans  &trans            &trans            &trans            &trans  &trans               &trans    &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
+&trans  &trans            &trans            &trans            &trans  &trans               &trans    &trans                                               &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&inc_dec_kp 0 0>;
