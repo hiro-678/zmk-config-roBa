@@ -190,6 +190,16 @@
 
             label = "LOGIN_HOLD_TAP";
         };
+
+        // 短押しと長押しで別のキーを入力
+        custom_ht: custom_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; // 好みに応じて調整してください
+            bindings = <&kp>, <&kp>;  // <長押し時のキー> <単押し時のキー>
+            label = "CUSTOM_HOLD_TAP";
+        };
     };
 
     keymap {
@@ -197,10 +207,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E    &kp R      &kp T                                            &kp Y        &kp U  &kp I      &kp O    &login_ht 0 P
-&mt LSHFT A       &kp S         &kp D    &kp F      &kp G        &kp LS(LG(S))         &kp JP_EQUAL  &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V      &kp B        &kp JP_AMPERSAND      &kp JP_COLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt RCTRL ESCAPE  &kp LEFT_ALT  &kp TAB  &kp LANG2  &lt 2 SPACE  &lt 2 BACKSPACE       &lt 1 LANG1   &lt 3 ENTER                             &mt RCTRL QUESTION
+&kp Q             &kp W         &kp E    &kp R      &kp T                                                       &kp Y        &kp U  &kp I      &kp O    &login_ht 0 P
+&mt LSHFT A       &kp S         &kp D    &kp F      &kp G        &kp LS(LG(S))         &custom_ht F7 JP_EQUAL   &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V      &kp B        &kp JP_AMPERSAND      &custom_ht F10 JP_COLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt RCTRL ESCAPE  &kp LEFT_ALT  &kp TAB  &kp LANG2  &lt 2 SPACE  &lt 2 BACKSPACE       &lt 1 LANG1              &lt 3 ENTER                             &mt RCTRL QUESTION
             >;
 
             sensor-bindings =
