@@ -176,7 +176,7 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <30>;
-            bindings = <&kp LG(C) &kp LG(T) &macro_wait_time 150 &kp LG(V) &kp ENTER>;
+            bindings = <&kp LG(C) &kp LG(T) &macro_wait_time 150 &kp LG(V)>;
             label = "COPY_SEARCH";
         };
     };
@@ -274,10 +274,10 @@
 
         ARROW {
             bindings = <
-&trans  &trans  &trans            &kp LA(LG(UP))    &trans                                 &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
-&trans  &trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans      &trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
-&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans                                               &trans
+&trans  &trans  　　　　　　&kp LA(LG(UP))    &trans             &trans                      &trans  &kp LG(T)     &kp UP_ARROW  &kp LG(W)        &trans
+&trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans  &trans      &trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &trans
+&trans  &trans  　　　　　　&trans            &trans             &trans  &trans      &trans  &trans  &copy_search  &trans        &kp LS(LG(T))    &trans
+&trans  &trans  　　　　　　&trans            &trans             &trans  &trans      &trans  &trans                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
