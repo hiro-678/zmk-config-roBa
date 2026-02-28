@@ -161,13 +161,6 @@
             bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp JP_UNDERSCORE &kp LS(T) &kp E &kp T &kp S &kp U>;
             label = "PW2_LONG";
         };
-
-        mail2: mail2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = < &kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp DOT &kp S &kp A &kp Y &kp A &kp M &kp A &kp JP_AT &kp A &kp S &kp T &kp E &kp L  &kp L &kp A &kp S &kp DOT &kp C &kp O &kp M>;
-            label = "MAIL2";
-        };
     };
 
     behaviors {
@@ -198,10 +191,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W              &kp E             &kp R      &kp T                                            &kp Y        &kp U  &kp I      &kp O    &login_ht 0 P
-&mt LSHFT A       &kp S              &kp D             &kp F      &kp G        &kp LS(LG(S))         &kp JP_EQUAL  &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X              &kp C             &kp V      &kp B        &kp JP_AMPERSAND      &kp JP_COLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt RCTRL ESCAPE  &kp RIGHT_CONTROL  &mt LEFT_ALT TAB  &kp LANG2  &lt 2 SPACE  &lt 3 BACKSPACE       &lt 2 LANG1   &lt 1 ENTER                             &kp QUESTION
+&kp Q             &kp W         &kp E    &kp R      &kp T                                            &kp Y        &kp U  &kp I      &kp O    &login_ht 0 P
+&mt LSHFT A       &kp S         &kp D    &kp F      &kp G        &kp LS(LG(S))         &kp JP_EQUAL  &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V      &kp B        &kp JP_AMPERSAND      &kp JP_COLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt RCTRL ESCAPE  &kp LEFT_ALT  &kp TAB  &kp LANG2  &lt 2 SPACE  &lt 3 BACKSPACE       &lt 1 LANG1   &lt 3 ENTER                             &mt RCTRL QUESTION
             >;
 
             sensor-bindings =
