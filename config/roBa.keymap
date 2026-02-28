@@ -277,8 +277,8 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans             &trans                                 &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans             &trans  &trans      &trans             &trans  &mkp MB1  &mkp MB2  &mkp MB4  &trans
-&trans  &trans  &trans  &trans             &trans  &trans      &trans             &trans  &trans    &trans    &mkp MB5  &trans
+&trans  &trans  &trans  &trans             &trans  &trans      &trans             &trans  &mkp MB1  &mkp MB2  &trans    &trans
+&trans  &trans  &trans  &trans             &trans  &trans      &trans             &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &to_layer_0 LANG2  &trans  &trans      &to_layer_0 LANG1  &trans                                &trans
             >;
         };
@@ -303,10 +303,10 @@
 
         FIXARROW {
             bindings = <
-&tog 7  &trans  &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &trans                                &trans  &trans    &kp UP_ARROW  &kp LG(W)        &trans
-&trans  &trans  &trans            &kp LA(LG(UP))     &kp LG(T)  &trans             &trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans            &kp LG(LA(DOWN))   &kp LG(W)  &kp LS(LG(T))      &trans  &trans  &trans    &trans        &trans           &trans
-&trans  &trans  &trans            &trans             &trans     &trans             &trans  &trans                                           &trans
+&tog 7  &trans  &trans            &kp LA(LG(UP))    &trans                                 &trans  &kp LG(T)  &kp UP_ARROW  &kp LG(W)        &trans
+&trans  &trans  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans      &trans  &trans  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans  &trans     &trans        &kp LS(LG(T))    &trans
+&trans  &trans  &trans            &trans            &trans             &trans      &trans  &trans                                            &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&inc_dec_kp 0 0>;
