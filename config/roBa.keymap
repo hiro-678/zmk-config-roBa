@@ -171,22 +171,6 @@
             label = "MAIL2";
         };
 
-        // ショットガン・コピー: Win(Ctrl+C) & Mac(Cmd+C)
-        copy_sg: copy_sg {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(C) &kp LG(C)>;
-            label = "COPY_SG";
-        };
-
-        // ショットガン・ペースト: Win(Ctrl+V) & Mac(Cmd+V)
-        paste_sg: paste_sg {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(V) &kp LG(V)>;
-            label = "PASTE_SG";
-        };
-
         copy_search: copy_search {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -194,36 +178,6 @@
             tap-ms = <30>;
             bindings = <&kp LG(C) &kp LG(T) &macro_wait_time 150 &kp LG(V)>;
             label = "COPY_SEARCH";
-        };
-
-        // 範囲指定してクリップボード保存（Windows: Win+Shift+S / Mac: Cmd+Shift+Ctrl+4）
-        sc_clip: sc_clip {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
-            bindings = <&kp LG(LS(S))>, <&kp LS(LG(LC(N4)))>;
-            label = "SC_CLIP";
-        };
-
-        // 長押し(0.5秒)でコピー、単押しでキー入力
-        copy_ht: copy_ht {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <500>; 
-            bindings = <&copy_sg>, <&kp>;
-            label = "COPY_HOLD_TAP";
-        };
-
-        // 長押し(0.5秒)でペースト、単押しでキー入力
-        paste_ht: paste_ht {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <500>; 
-            bindings = <&paste_sg>, <&kp>;
-            label = "PASTE_HOLD_TAP";
         };
     };
 
@@ -246,16 +200,6 @@
             bindings = <&login_macro>, <&kp>;
 
             label = "LOGIN_HOLD_TAP";
-        };
-
-        // 長押しでSSをクリップボードに保存するマクロ、タップで通常のキー入力をする挙動
-        sc_clip_ht: sc_clip_ht {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <1000>; // Sは頻用するため、誤爆防止に少し長めを推奨
-            bindings = <&sc_clip>, <&kp>;
-            label = "SC_CLIP_HOLD_TAP";
         };
 
         // 短押しと長押しで別のキーを入力
@@ -299,7 +243,7 @@
         default_layer {
             bindings = <
 &tog_ht 7 Q       &kp W            &kp E               &kp R                &kp T                                                          &kp Y        &kp U  &kp I      &kp O    &login_ht 0 P
-&mt LSHFT A       &sc_clip_ht 0 S  &kp D               &kp F                &kp G        &custom_ht END HOME      &custom_ht F7 JP_EQUAL   &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
+&mt LSHFT A       &kp S            &kp D               &kp F                &kp G        &custom_ht END HOME      &custom_ht F7 JP_EQUAL   &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X            &custom_ht LC(C) C  &custom_ht LC(V) V   &kp B        &kp JP_AMPERSAND         &custom_ht F10 JP_COLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &mt RCTRL ESCAPE  &kp LEFT_ALT     &kp TAB             &kp LANG2            &lt 2 SPACE  &lt 2 BACKSPACE          &lt 1 LANG1              &lt 3 ENTER                             &mt RCTRL QUESTION
             >;
