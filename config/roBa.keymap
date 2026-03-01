@@ -179,6 +179,16 @@
             bindings = <&kp LG(C) &kp LG(T) &macro_wait_time 150 &kp LG(V)>;
             label = "COPY_SEARCH";
         };
+
+        // 範囲指定してクリップボード保存（Windows: Win+Shift+S / Mac: Cmd+Shift+Ctrl+4）
+        sc_clip: sc_clip {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
+            bindings = <&kp LG(LS(S))>, <&kp LS(LG(LC(N4)))>;
+            label = "SC_CLIP";
+        };
     };
 
     behaviors {
