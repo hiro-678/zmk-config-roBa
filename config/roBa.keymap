@@ -171,6 +171,22 @@
             label = "MAIL2";
         };
 
+        // ショットガン・コピー: Win(Ctrl+C) & Mac(Cmd+C)
+        copy_sg: copy_sg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LG(C)>;
+            label = "COPY_SG";
+        };
+
+        // ショットガン・ペースト: Win(Ctrl+V) & Mac(Cmd+V)
+        paste_sg: paste_sg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V) &kp LG(V)>;
+            label = "PASTE_SG";
+        };
+
         copy_search: copy_search {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -188,6 +204,26 @@
             tap-ms = <20>;
             bindings = <&kp LG(LS(S))>, <&kp LS(LG(LC(N4)))>;
             label = "SC_CLIP";
+        };
+
+        // 長押し(0.5秒)でコピー、単押しでキー入力
+        copy_ht: copy_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; 
+            bindings = <&copy_sg>, <&kp>;
+            label = "COPY_HOLD_TAP";
+        };
+
+        // 長押し(0.5秒)でペースト、単押しでキー入力
+        paste_ht: paste_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; 
+            bindings = <&paste_sg>, <&kp>;
+            label = "PASTE_HOLD_TAP";
         };
     };
 
