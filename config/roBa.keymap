@@ -201,8 +201,7 @@
             tapping-term-ms = <200>;
         };
 
-        // 長押しでマクロ、タップで通常のキー入力をする挙動
-
+        // 長押しでログインパスワード入力マクロ、タップで通常のキー入力をする挙動
         login_ht: login_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -213,15 +212,24 @@
             label = "LOGIN_HOLD_TAP";
         };
 
-        // 短押しと長押しで別のキーを入力
+        // 長押しでSSをクリップボードに保存するマクロ、タップで通常のキー入力をする挙動
+        sc_clip_ht: sc_clip_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; // Sは頻用するため、誤爆防止に少し長めを推奨
+            bindings = <&sc_clip>, <&kp>;
+            label = "SC_CLIP_HOLD_TAP";
+        };
 
+        // 短押しと長押しで別のキーを入力
         custom_ht: custom_ht {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <500>; // 好みに応じて調整してください
             bindings = <&kp>, <&kp>;
-  // <長押し時のキー> <単押し時のキー>
+            // <長押し時のキー> <単押し時のキー>
             label = "CUSTOM_HOLD_TAP";
         };
 
