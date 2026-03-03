@@ -170,7 +170,7 @@
             tap-ms = <30>;
             bindings 
                 = <&kp LG(N7)>          // Win + 7
-                , <&macro_wait_time 1000> // 起動待ち
+                , <&macro_wait_time 2000> // 起動待ち
                 , <&kp ENTER>           // Enter
                 ;
             label = "SNIP_EDIT";
