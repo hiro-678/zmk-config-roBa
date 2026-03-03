@@ -180,7 +180,7 @@
             label = "COPY_SEARCH";
         };
 
-        // 加工用スニップ：7番目のアプリ起動 -> 0.6秒待機 -> 新規作成
+        // 加工用スニップ：7番目のアプリ起動 -> 1秒待機 -> 新規作成
         snip_edit: snip_edit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -188,7 +188,7 @@
             tap-ms = <30>;
             bindings 
                 = <&kp LG(N7)>          // Win + 7
-                , <&macro_wait_time 600> // 起動待ち
+                , <&macro_wait_time 1000> // 起動待ち
                 , <&kp LC(N)>           // Ctrl + N
                 ;
             label = "SNIP_EDIT";
