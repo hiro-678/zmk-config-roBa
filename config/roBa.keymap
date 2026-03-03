@@ -39,12 +39,6 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <250>; // mt（AキーのShiftなど）の判定も250msに統一
-};
-
-&lt {
-    tapping-term-ms = <250>; // lt（SPACEやBACKSPACE）の判定を250msに設定
-    quick-tap-ms = <200>;    // これを足すと、スペースの連打がスムーズになります
 };
 
 &trackball {
@@ -184,6 +178,20 @@
             tap-ms = <30>;
             bindings = <&kp LG(C) &kp LG(T) &macro_wait_time 150 &kp LG(V)>;
             label = "COPY_SEARCH";
+        };
+
+        // 加工用スニップ：7番目のアプリ起動 -> 0.6秒待機 -> 新規作成
+        snip_edit: snip_edit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings 
+                = <&kp LG(N7)>          // Win + 7
+                , <&macro_wait_time 600> // 起動待ち
+                , <&kp LC(N)>           // Ctrl + N
+                ;
+            label = "SNIP_EDIT";
         };
     };
 
