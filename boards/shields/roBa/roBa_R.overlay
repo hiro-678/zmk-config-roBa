@@ -59,8 +59,3 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
-
-// スクロール速度の調整
-&pointer_input {
-    scroll-scaling = <3>;
-};
