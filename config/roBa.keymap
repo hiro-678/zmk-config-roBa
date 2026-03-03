@@ -7,7 +7,6 @@
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 // 1段目（数字行）の記号
-
 #define JP_DQUOTE    AT_SIGN        // " (JIS Shift+2)
 #define JP_AMPERSAND CARET          // & (JIS Shift+6)
 #define JP_QUOTE     AMPS           // ' (JIS Shift+7)
@@ -19,7 +18,6 @@
 #define JP_BSLH      INT_RO         // \ (JISの「ろ」のキー)
 
 // 2段目・3段目の記号
-
 #define JP_AT        LBKT           // @ (JIS Pの右)
 #define JP_LBRACKET  RBKT           // [ (JIS @の右)
 #define JP_COLON     SQT            // : (JIS ;の右)
@@ -27,7 +25,6 @@
 #define JP_RBRACKET  BSLH           // ] (JIS む)
 
 // 特殊記号（Shiftが必要なもの）
-
 #define JP_PLUS      COLON          // + (JIS Shift+;)
 #define JP_TILDE     PLUS           // ~ (JIS Shift+^)
 #define JP_PIPE      LS(INT_YEN)    // | (JIS Shift+¥)
@@ -35,6 +32,7 @@
 #define JP_LBRACE    RBRC           // { (JIS Shift+[)
 #define JP_RBRACE    PIPE           // } (JIS Shift+])
 #define JP_UNDERSCORE LS(INT_RO)    // _ (JIS Shift+ろ / 0x87)
+
 
 &mt {
     flavor = "balanced";
@@ -44,43 +42,31 @@
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
-
-    // arrows {
-    //     layers = <3>;
-    //     bindings =
-    //         <&kp RIGHT_ARROW>,
-    //         <&kp LEFT_ARROW>,
-    //         <&kp UP_ARROW>,
-    //         <&kp DOWN_ARROW>;
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
 };
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
+        //tab {
+        //    bindings = <&kp TAB>;
+        //    key-positions = <11 12>;
+        //};
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
+        //shift_tab {
+        //    bindings = <&kp LS(TAB)>;
+        //    key-positions = <12 13>;
+        //};
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
+        //double_quotation {
+        //    bindings = <&kp DOUBLE_QUOTES>;
+        //    key-positions = <20 21>;
+        //};
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
+        //eq {
+        //    bindings = <&kp EQUAL>;
+        //    key-positions = <24 25>;
+        //};
 
         Desk_LEFT {
             bindings = <&kp LC(LEFT)>;
@@ -166,6 +152,7 @@
             label = "MAIL2";
         };
 
+        // 選択文字列から新規タブ作成
         copy_search: copy_search {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -207,7 +194,6 @@
             flavor = "tap-preferred";
             tapping-term-ms = <1000>; // 1秒以上の長押しでマクロ発動
             bindings = <&login_macro>, <&kp>;
-
             label = "LOGIN_HOLD_TAP";
         };
 
@@ -227,9 +213,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
             // 追加: スクロールのタップ時間を設定 (20ms)
-
             tap-ms = <20>;
         };
 
