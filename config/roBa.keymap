@@ -42,6 +42,11 @@
     tapping-term-ms = <250>; // mt（AキーのShiftなど）の判定も250msに統一
 };
 
+&lt {
+    tapping-term-ms = <250>; // lt（SPACEやBACKSPACE）の判定を250msに設定
+    quick-tap-ms = <200>;    // これを足すと、スペースの連打がスムーズになります
+};
+
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
