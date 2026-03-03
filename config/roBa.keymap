@@ -39,6 +39,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    tapping-term-ms = <250>; // mt（AキーのShiftなど）の判定も250msに統一
 };
 
 &trackball {
@@ -262,7 +263,7 @@
 
         NUM {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F12                                    &kp PERCENT  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp JP_PLUS
+&trans  &trans  &kp F8  &kp F9  &kp F12                                    &kp PERCENT  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp JP_PLUS
 &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans                &kp DOLLAR  &kp PERIOD   &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
 &trans  &kp F1  &kp F2  &kp F3  &kp F10  &kp JP_BACKQUOTE      &kp JP_YEN  &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans
 &trans  &trans  &trans  &trans  &trans   &trans                &trans      &trans                                        &kp JP_ASTERISK
