@@ -212,7 +212,7 @@
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             // 追加: スクロールのタップ時間を設定 (20ms)
             tap-ms = <20>;
         };
@@ -247,7 +247,7 @@
 &tog_ht 7 Q       &kp W            &kp E                  &kp R                     &kp T                                                                                &kp Y        &kp U  &kp I      &kp O    &login_ht 0 P
 &mt LSHFT A       &snip_ht 0 S     &custom_ht LG(LS(S)) D &custom_ht LG(LS(N4)) F   &custom_ht LC(LG(LS(N4))) G        &custom_ht END HOME      &custom_ht F7 JP_EQUAL   &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X            &kp C                  &kp V                     &kp B                              &kp JP_AMPERSAND         &custom_ht F10 JP_COLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt RCTRL ESCAPE  &kp LEFT_ALT     &kp TAB                &kp BACKSPACE             &lt 2 SPACE                        &lt 2 LANG2              &lt 1 LANG1              &lt 3 ENTER                             &mt RCTRL QUESTION
+&mt RCTRL ESCAPE  &kp LEFT_ALT     &kp TAB                &kp LANG2                 &lt 2 SPACE                        &lt 2 BACKSPACE          &lt 1 LANG1              &lt 3 ENTER                             &mt RCTRL QUESTION
             >;
 
             sensor-bindings = <&scroll_up_down>, <&inc_dec_kp 0 0>;
@@ -255,10 +255,10 @@
 
         FUNCTION {
             bindings = <
-&pw1_short  &pw1_middle  &pw1_long  &mail1   &trans                                   &kp JP_QUOTE   &kp JP_LBRACKET  &kp JP_RBRACKET  &kp LESS_THAN  &kp GREATER_THAN
-&pw2_short  &pw2_middle  &pw2_long  &mail2   &trans  &trans        &kp JP_UNDERSCORE  &kp JP_DQUOTE  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_PIPE    &kp JP_TILDE
-&trans      &trans       &trans     &trans   &trans  &kp HASH      &kp SEMICOLON      &kp JP_AT      &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_CARET   &kp JP_BSLH
-&trans      &trans       &trans     &kp DEL  &trans  &trans        &trans             &trans                                                          &kp EXCLAMATION
+&pw1_short  &pw1_middle  &pw1_long  &mail1  &trans                                   &kp JP_QUOTE   &kp JP_LBRACKET  &kp JP_RBRACKET  &kp LESS_THAN  &kp GREATER_THAN
+&pw2_short  &pw2_middle  &pw2_long  &mail2  &trans  &trans        &kp JP_UNDERSCORE  &kp JP_DQUOTE  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_PIPE    &kp JP_TILDE
+&trans      &trans       &trans     &trans  &trans  &kp HASH      &kp SEMICOLON      &kp JP_AT      &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_CARET   &kp JP_BSLH
+&trans      &trans       &trans     &trans  &trans  &kp DEL       &trans             &trans                                                          &kp EXCLAMATION
             >;
         };
 
