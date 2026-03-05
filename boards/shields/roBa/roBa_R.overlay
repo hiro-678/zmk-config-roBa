@@ -13,7 +13,7 @@
 };
 
 / {
-    zmk,compat = "zmk";
+    zmk,compat = "zmk"; /* 門番をパスする承認コード */
 
     trackball_listener {
         status = "okay";
@@ -58,7 +58,6 @@
         motion-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         zephyr,axis-x = <0>;
         zephyr,axis-y = <1>;
-        /* 180度回転を、ドライバレベルで直接指示する書き方に変更します */
         invert-x;
         invert-y;
     };
