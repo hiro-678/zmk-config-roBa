@@ -90,6 +90,93 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        login_macro: login_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp ENTER>;
+            label = "LOGIN_MACRO";
+        };
+
+        pw1_short: pw1_short {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4>;
+            label = "PW1_SHORT";
+        };
+
+        pw1_middle: pw1_middle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp LS(Y) &kp U &kp I>;
+            label = "PW1_MIDDLE";
+        };
+
+        pw1_long: pw1_long {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp JP_UNDERSCORE &kp LS(Y) &kp U &kp I>;
+            label = "PW1_LONG";
+        };
+
+        mail1: mail1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp A &kp Y &kp A &kp M &kp A &kp DOT &kp N6 &kp N7 &kp N8 &kp JP_AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL1";
+        };
+
+        pw2_short: pw2_short {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1>;
+            label = "PW2_SHORT";
+        };
+
+        pw2_middle: pw2_middle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp LS(T) &kp E &kp T &kp S &kp U>;
+            label = "PW2_MIDDLE";
+        };
+
+        pw2_long: pw2_long {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N9 &kp N0 &kp N5 &kp N1 &kp N1 &kp JP_UNDERSCORE &kp LS(T) &kp E &kp T &kp S &kp U>;
+            label = "PW2_LONG";
+        };
+
+        mail2: mail2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp I &kp R &kp O &kp Y &kp U &kp K &kp I &kp DOT &kp S &kp A &kp Y &kp A &kp M &kp A &kp JP_AT &kp A &kp S &kp T &kp E &kp L &kp L &kp A &kp S &kp DOT &kp C &kp O &kp M>;
+            label = "MAIL2";
+        };
+
+        // 選択文字列から新規タブ作成
+        copy_search: copy_search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp LG(C) &kp LG(T) &macro_wait_time 150 &kp LG(V)>;
+            label = "COPY_SEARCH";
+        };
+
+        // 加工用スニップ：7番目のアプリ起動 -> 1秒待機 -> 新規作成
+        snip_edit: snip_edit {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings 
+                = <&kp LG(N7)>          // Win + 7
+                , <&macro_wait_time 2000> // 起動待ち
+                , <&kp ENTER>           // Enter
+                ;
+            label = "SNIP_EDIT";
+        };
     };
 
     behaviors {
