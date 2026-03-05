@@ -176,6 +176,48 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        // 長押しでログインパスワード入力マクロ、タップで通常のキー入力をする挙動
+        login_ht: login_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1000>; // 1秒以上の長押しでマクロ発動
+            bindings = <&login_macro>, <&kp>;
+            label = "LOGIN_HOLD_TAP";
+        };
+
+        // 短押しと長押しで別のキーを入力
+        custom_ht: custom_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; // 0.5秒以上の長押しでマクロ発動
+            bindings = <&kp>, <&kp>;
+            // <長押し時のキー> <単押し時のキー>
+            label = "CUSTOM_HOLD_TAP";
+        };
+
+        // 長押しでスニップ起動、単押しでキー入力
+        snip_ht: snip_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; // 0.5秒の長押しで発動
+            bindings = <&snip_edit>, <&kp>;
+            label = "SNIP_HOLD_TAP";
+        };
+
+        // 長押しでレイヤーをトグル、単押しで通常のキーを入力する設定
+        tog_ht: tog_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>; // 長押しと判定する時間（ms）
+            bindings = <&tog>, <&kp>;
+            // <長押し時のトグル先> <単押し時のキー>
+            label = "TOGGLE_HOLD_TAP";
+        };
     };
 
     keymap {
