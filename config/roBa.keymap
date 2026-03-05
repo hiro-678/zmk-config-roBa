@@ -89,7 +89,7 @@
         };
 
         login_macro: login_macro {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp ENTER>;
             label = "LOGIN_MACRO";
@@ -163,7 +163,7 @@
 
         // 加工用スニップ：7番目のアプリ起動 -> 1秒待機 -> 新規作成
         snip_edit: snip_edit {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             wait-ms = <30>;
             tap-ms = <30>;
