@@ -1,8 +1,6 @@
 #include "roBa.dtsi"
 
-&default_transform {
-    col-offset = <6>;
-};
+&default_transform { col-offset = <6>; };
 
 &kscan0 {
     col-gpios
@@ -19,12 +17,13 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* 180度回転を実現するための設定（X軸とY軸の両方を反転） */
+        /* 180度回転の設定 */
         x-invert;
         y-invert;
     };
 };
 
+/* SPIピン定義などはHiroさんの物理配線（LP版）を維持しています */
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -33,7 +32,6 @@
                 <NRF_PSEL(SPIM_MISO, 0, 4)>;
         };
     };
-
     spi0_sleep: spi0_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
@@ -59,9 +57,9 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        /* 修正箇所: Action #155 で指摘された必須のピン設定名です */
         motion-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        /* CPI（速度）の設定をここで行います */
-        cpi = <600>;
+        /* 修正の鍵：最新ZMKで必須となった軸定義を追加します */
+        zephyr,axis-x = <0>;
+        zephyr,axis-y = <1>;
     };
 };
