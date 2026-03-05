@@ -17,13 +17,9 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* 180度回転の設定 */
-        x-invert;
-        y-invert;
     };
 };
 
-/* SPIピン定義などはHiroさんの物理配線（LP版）を維持しています */
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -58,8 +54,11 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         motion-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        /* 修正の鍵：最新ZMKで必須となった軸定義を追加します */
         zephyr,axis-x = <0>;
         zephyr,axis-y = <1>;
+        /* 180度回転を、ドライバレベルで直接指示する書き方に変更します */
+        invert-x;
+        invert-y;
+        cpi = <600>;
     };
 };
