@@ -90,7 +90,7 @@
         login_macro: login_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp N0 &kp N7 &kp N0 &kp N8 &kp N2 &kp N4 &kp ENTER>;
+            bindings = <&kp LG(N7)>, <&macro_wait_time 2000>, <&kp ENTER>, <&macro_param_1to1 &none>;
             label = "LOGIN_MACRO";
         };
 
