@@ -16,7 +16,7 @@
 
 / {
     trackball_processor: trackball_processor {
-        compatible = "zmk,input-processor-trackball";
+        compatible = "zmk,input-processor";
         #input-processor-cells = <0>;
 
         device = <&trackball>;
