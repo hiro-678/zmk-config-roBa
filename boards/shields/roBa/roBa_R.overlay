@@ -60,7 +60,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         /* 修正箇所: Action #155 で指摘された必須のピン設定名です */
-        irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        motion-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         /* CPI（速度）の設定をここで行います */
         cpi = <600>;
     };
