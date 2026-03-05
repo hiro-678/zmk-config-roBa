@@ -1,5 +1,4 @@
 #include "roBa.dtsi"
-#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -16,15 +15,10 @@
 };
 
 / {
-    trackball_listener: trackball_listener {
+    trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
-        input-processors = <
-            &zmk_input_processor_xy_scaler 2
-            &zmk_input_processor_xy_to_scroll 5
-        >;
     };
 };
 
