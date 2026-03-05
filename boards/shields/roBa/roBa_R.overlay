@@ -1,5 +1,7 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
+#include <input/processors/xy_to_scroll.dtsi>
+#include <input/processors/xy_scaler.dtsi>
 
 &default_transform {
     col-offset = <6>;
