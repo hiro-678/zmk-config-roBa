@@ -13,6 +13,8 @@
 };
 
 / {
+    zmk,compat = "zmk";
+
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
