@@ -15,10 +15,25 @@
 };
 
 / {
+    trackball_processor: trackball_processor {
+        compatible = "zmk,input-processor-trackball";
+        #input-processor-cells = <0>;
+
+        device = <&trackball>;
+
+        // 速度調整
+        scale = <3>;
+
+        // ナチュラルスクロール
+        scroll-invert-y;
+
+    };
+
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
-        device = <&trackball>;
+
+        device = <&trackball_processor>;
     };
 };
 
