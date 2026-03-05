@@ -5,13 +5,13 @@
 };
 
 &kscan0 {
-        col-gpios
-            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 8 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 7 GPIO_ACTIVE_HIGH>
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>
-            ;
+    col-gpios
+        = <&xiao_d 10 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH>
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>
+        ;
 };
 
 / {
@@ -19,6 +19,9 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        /* 180度回転を実現するための設定（X軸とY軸の両方を反転） */
+        x-invert;
+        y-invert;
     };
 };
 
@@ -56,8 +59,9 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        motion-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        zephyr,axis-x = <0>;
-        zephyr,axis-y = <1>;
+        /* 修正箇所: Action #155 で指摘された必須のピン設定名です */
+        irq-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        /* CPI（速度）の設定をここで行います */
+        cpi = <600>;
     };
 };
