@@ -14,7 +14,3 @@
 &left_encoder {
     status = "okay";
 };
-
-/ {
-    zmk,compat = "zmk";
-};
