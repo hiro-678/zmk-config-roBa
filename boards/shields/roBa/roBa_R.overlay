@@ -32,8 +32,8 @@
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
-
-        device = <&trackball_processor>;
+        device = <&trackball>;
+        input-processors = <&trackball_processor>; 
     };
 };
 
