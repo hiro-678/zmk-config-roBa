@@ -5,7 +5,9 @@ type: shield
 url: https://github.com/kumamuk-git/zmk-config-roBa
 requires: [seeeduino_xiao_ble]
 
-qualifiers: []
-
 features:
   - keys
+
+siblings:
+  - roBa_L
+  - roBa_R
