@@ -1,5 +1,9 @@
 #include "roBa.dtsi"
 
+/ {
+    zmk,compat = "zmk";
+};
+
 &kscan0 {
         col-gpios
             = <&xiao_d 10 GPIO_ACTIVE_HIGH>
