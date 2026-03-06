@@ -43,9 +43,6 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-    scroll-multiplier = <80>;
-
-
     // arrows {
     //     layers = <3>;
     //     bindings =
