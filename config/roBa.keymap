@@ -43,7 +43,7 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-    scroll-divider = <4>;
+    divisor = <4>;
 
     // arrows {
     //     layers = <3>;
