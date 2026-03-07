@@ -83,7 +83,6 @@
             key-positions = <19 20>;
             timeout-ms = <50>;
         };
-    };
 
         // ミッションコントロール
         MissionCntrlj {
@@ -91,6 +90,7 @@
             key-positions = <18 20>;
             timeout-ms = <50>;
         };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
