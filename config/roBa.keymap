@@ -92,7 +92,7 @@
         };
 
         // タスクビュー（Win）
-        MissionCntrl {
+        TaskView {
             bindings = <&kp LG(TAB)>;
             key-positions = <30 32>;
             timeout-ms = <50>;
