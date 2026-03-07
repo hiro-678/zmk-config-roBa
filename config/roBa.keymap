@@ -84,10 +84,17 @@
             timeout-ms = <50>;
         };
 
-        // ミッションコントロール
+        // ミッションコントロール（Mac）
         MissionCntrl {
             bindings = <&kp LC(UP)>;
             key-positions = <18 20>;
+            timeout-ms = <50>;
+        };
+
+        // タスクビュー（Win）
+        MissionCntrl {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <30 32>;
             timeout-ms = <50>;
         };
     };
