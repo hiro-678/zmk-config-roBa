@@ -328,10 +328,10 @@
 
         WINDOW {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans        &kp LG(UP)         &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LG(LEFT)  &kp LG(DOWN)       &kp LG(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans        &kp LG(LA(DOWN))   &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans        &kp LG(UP)             &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LG(LEFT)  &kp LG(DOWN)           &kp LG(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans        &kp LC(LA(LG(DOWN)))   &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                      &trans
             >;
         };
 
