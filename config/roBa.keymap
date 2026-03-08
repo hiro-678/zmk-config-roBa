@@ -70,13 +70,13 @@
         };
 
         // デスクトップを左右に移動（Mac）
-        Desk_LEFT {
+        Mac_Desk_LEFT {
             bindings = <&kp LC(LEFT)>;
             key-positions = <18 19>;
             timeout-ms = <50>;
         };
 
-        Desk_RIGHT {
+        Mac_Desk_RIGHT {
             bindings = <&kp LC(RIGHT)>;
             key-positions = <19 20>;
             timeout-ms = <50>;
@@ -88,6 +88,19 @@
             key-positions = <18 20>;
             timeout-ms = <50>;
         };
+
+        // デスクトップを左右に移動（Win）
+        Win_Desk_LEFT {
+            bindings = <&kp LG(LC(LEFT))>;
+            key-positions = <30 31>;
+            timeout-ms = <50>;
+        };
+
+        Win_Desk_RIGHT {
+            bindings = <&kp LG(LC(RIGHT))>;
+            key-positions = <31 32>;
+            timeout-ms = <50>;   
+
 
         // タスクビュー（Win）
         TaskView {
