@@ -42,25 +42,13 @@
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
-
-    // arrows {
-    //     layers = <3>;
-    //     bindings =
-    //         <&kp RIGHT_ARROW>,
-    //         <&kp LEFT_ARROW>,
-    //         <&kp UP_ARROW>,
-    //         <&kp DOWN_ARROW>;
-
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
 };
 
 / {
     combos {
         compatible = "zmk,combos";
 
+        // 記号入力
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
@@ -69,6 +57,16 @@
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
+        };
+
+        atmark {
+            bindings = <&kp JP_AT>;
+            key-positions = <4 10>;
+        };
+
+        under_score {
+            bindings = <&kp JP_UNDERSCORE>;
+            key-positions = <6 11>;
         };
 
         // デスクトップを左右に移動（Mac）
