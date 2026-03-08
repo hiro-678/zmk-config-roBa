@@ -100,7 +100,7 @@
             bindings = <&kp LG(LC(RIGHT))>;
             key-positions = <31 32>;
             timeout-ms = <50>;   
-
+        };
 
         // タスクビュー（Win）
         TaskView {
